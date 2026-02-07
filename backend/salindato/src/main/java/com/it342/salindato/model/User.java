@@ -3,21 +3,31 @@ package com.it342.salindato.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "users")  // MongoDB annotation - replaces @Entity
 public class User {
     
     @Id  // MongoDB's @Id (NOT jakarta.persistence.Id)
+    @Field("user_id")
     private String id;  // MongoDB uses String IDs, not Integer
     
-    @Indexed(unique = true)  // MongoDB way to make unique
+    @Indexed(unique = true)
     private String email;
     
+    @Field("first_name")
     private String firstName;
+
+    @Field("last_name")
     private String lastName;
+
     private String password;
+
+    @Field("phone_number")
     private String phoneNumber;
+
     private String role;
+    
     private String status;
 
     public User() {}
@@ -29,7 +39,6 @@ public class User {
         this.password = password;
     }
 
-    // Getters and setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
     
