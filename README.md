@@ -1,7 +1,7 @@
-WorkForce Portal
+# WorkForce Portal
 
 ## 📝 Project Description
-# Provide a more detailed explanation here. Talk about the problem this software solves, the target audience, and any unique features. Keep it concise but informative.
+Provide a more detailed explanation here. Talk about the problem this software solves, the target audience, and any unique features. Keep it concise but informative.
 
 ## 🛠 Technologies Used
 - Backend: Node.js, PostgreSQL
@@ -9,12 +9,12 @@ WorkForce Portal
 
 ## 🚀 Getting Started
 
-# Steps to run Backend
+### Steps to run Backend
 
 - cd backend
 - npm run dev
 
-# Steps to run Frontend
+### Steps to run Frontend
 
 - cd frontend
 - npm start
