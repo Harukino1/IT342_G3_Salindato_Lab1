@@ -1,32 +1,31 @@
 # Project Task Checklist
 
 ## 🟢 DONE
-*No tasks completed yet.*
-
+- [x] Build **Register** page (Hash: b5b9704)
+- [x] Build **Login** page (Hash: b5b9704)
+- [x] Write Project description (Hash: cb18904)
+- [x] List Technologies used (Hash: da4533f)
 ---
 
 ## 🟡 IN-PROGRESS
-*No tasks currently in progress.*
+- [x] Configure MongoDB Database connection
 
 ---
 
 ## 🔴 TODO
 
 ### Backend Development (Spring Boot)
-- [ ] Configure MySQL Database connection
 - [ ] Implement Password encryption using **BCrypt**
 - [ ] Create `POST /api/auth/register` endpoint
 - [ ] Create `POST /api/auth/login` endpoint
 - [ ] Create `GET /api/user/me` (Protected) endpoint
 
 ### Web Application (ReactJS)
-- [ ] Build **Register** page
-- [ ] Build **Login** page
 - [ ] Build **Dashboard/Profile** page (Protected)
 - [ ] Implement **Logout** functionality
 
 ### Documentation Update (/docs/FRS.pdf)
-- [ ] Create and include **ERD** (Entity Relationship Diagram)
+- [ ] Include **ERD** (Entity Relationship Diagram)
 - [ ] Include **UML Diagrams** from previous activity
 - [ ] Capture and include **Register** UI screenshot
 - [ ] Capture and include **Login** UI screenshot
@@ -34,8 +33,6 @@
 - [ ] Capture and include **Logout** action screenshot
 
 ### README.md Completion
-- [ ] Write Project description
-- [ ] List Technologies used
 - [ ] Write steps to run **Backend**
 - [ ] Write steps to run **Web App**
 - [ ] Write steps to run **Mobile App**
