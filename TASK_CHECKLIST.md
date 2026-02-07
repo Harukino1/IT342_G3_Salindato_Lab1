@@ -5,19 +5,21 @@
 - [x] Build **Login** page (Hash: b5b9704)
 - [x] Write Project description (Hash: cb18904)
 - [x] List Technologies used (Hash: da4533f)
+- [x] Write steps to run **Backend** (Hash: 44816f7)
+- [x] Write steps to run **Web App** (Hash: 44816f7)
 ---
 
 ## 🟡 IN-PROGRESS
 - [x] Configure MongoDB Database connection
-
+- [x] Create `POST /api/auth/register` endpoint
+- [x] Create `POST /api/auth/login` endpoint
+- [x] Implement Password encryption using **BCrypt**
+- [x] Build **Dashboard/Profile** page (Protected)
 ---
 
 ## 🔴 TODO
 
 ### Backend Development (Spring Boot)
-- [ ] Implement Password encryption using **BCrypt**
-- [ ] Create `POST /api/auth/register` endpoint
-- [ ] Create `POST /api/auth/login` endpoint
 - [ ] Create `GET /api/user/me` (Protected) endpoint
 
 ### Web Application (ReactJS)
@@ -33,7 +35,5 @@
 - [ ] Capture and include **Logout** action screenshot
 
 ### README.md Completion
-- [ ] Write steps to run **Backend**
-- [ ] Write steps to run **Web App**
 - [ ] Write steps to run **Mobile App**
 - [ ] List all API endpoints
