@@ -8,7 +8,6 @@ Provide a more detailed explanation here. Talk about the problem this software s
 - Web: React.js
 
 ## 🚀 Getting Started
-
 ### Steps to run Backend
 
 - cd backend
