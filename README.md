@@ -1,7 +1,11 @@
 # WorkForce Portal
 
 ## 📝 Project Description
-Provide a more detailed explanation here. Talk about the problem this software solves, the target audience, and any unique features. Keep it concise but informative.
+WorkForce Portal is a robust, scalable, and secure centralized platform designed to streamline workforce management and authentication. It serves as a mission-critical gateway that bridges the gap between employee resource access and administrative oversight.
+
+- **For Employees**: Acts as the primary portal for accessing essential company resources.
+- **For Management**: Provides real-time data and analytics regarding personnel availability and workforce status.
+- **Automation**: Enhances operational efficiency by automating attendance tracking and status updates across the organization.
 
 ## 🛠 Technologies Used
 - Backend: Node.js, PostgreSQL
