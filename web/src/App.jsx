@@ -1,22 +1,18 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { LoginForm } from './pages/LoginForm';
-// import { RegisterPage } from './pages/RegisterPage'; // Uncomment when created
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
+
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        {/* Default route redirects to login */}
-        <Route path="/" element={<Navigate to="/login" />} />
-        
-        {/* Auth Routes */}
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={<div>Register UI Coming Soon</div>} />
-
-        {/* Protected Routes (We will add the logic for this later) */}
-        <Route path="/dashboard" element={<div>Dashboard UI Coming Soon</div>} />
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
