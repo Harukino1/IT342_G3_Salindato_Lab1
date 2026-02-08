@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class User {
     
     @Id  // MongoDB's @Id (NOT jakarta.persistence.Id)
-    @Field("user_id")
     private String id;  // MongoDB uses String IDs, not Integer
     
     @Indexed(unique = true)

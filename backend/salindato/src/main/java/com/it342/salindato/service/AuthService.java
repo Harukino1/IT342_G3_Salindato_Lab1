@@ -67,6 +67,11 @@ public class AuthService {
         
         // Generate token
         String token = tokenProvider.generateToken(user);
+
+        if (!token.equals(user.getToken())){
+            user.setToken(token);
+            userRepository.save(user);
+        }
         
         return new AuthResponseDTO(
             token,

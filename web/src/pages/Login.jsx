@@ -77,6 +77,7 @@ const Login = () => {
       }
     } catch (err) {
       console.error('Login error:', err);
+      console.log('Backend error message:', err.response?.data);
 
       if(error.response){
         if(error.response.status === 401){
