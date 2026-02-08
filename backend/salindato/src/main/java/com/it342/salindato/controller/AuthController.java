@@ -7,13 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.it342.salindato.dto.AuthRequestDTO;
@@ -29,6 +26,7 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
+    // Authenticates a user using email and password and returns an auth token on success.
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody AuthRequestDTO authRequest) {
         try {
@@ -44,6 +42,7 @@ public class AuthController {
         }
     }
 
+    // Logs out the user by invalidating/removing the provided authentication token.
     @PostMapping("/logout")
     public ResponseEntity<?> logout(@RequestHeader("Authorization") String token) {
         try {
@@ -64,6 +63,7 @@ public class AuthController {
         }
     }
 
+    // Registers a new user account and returns basic user details after successful creation.
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody UserRegistrationDTO registrationDTO) {
         try {
@@ -84,6 +84,7 @@ public class AuthController {
         }
     }
 
+    // Retrieves the currently authenticated user's details based on the provided token.
     @GetMapping("/user/me")
     public ResponseEntity<?> getCurrentUser(@RequestHeader("Authorization") String token) {
         try {
@@ -110,21 +111,21 @@ public class AuthController {
         }
     }
     
-    // Optional: Add endpoint to update user status for admin use
-    @PutMapping("/users/{userId}/status")
-    public ResponseEntity<?> updateUserStatus(
-            @PathVariable String userId,
-            @RequestParam String status) {
-        try {
-            authService.updateUserStatus(userId, status);
+    // Endpoint to update user status for admin use
+    // @PutMapping("/users/{userId}/status")
+    // public ResponseEntity<?> updateUserStatus(
+    //         @PathVariable String userId,
+    //         @RequestParam String status) {
+    //     try {
+    //         authService.updateUserStatus(userId, status);
             
-            Map<String, String> response = new HashMap<>();
-            response.put("message", "User status updated successfully");
-            return ResponseEntity.ok(response);
-        } catch (RuntimeException e) {
-            Map<String, String> error = new HashMap<>();
-            error.put("message", e.getMessage());
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
-        }
-    }
+    //         Map<String, String> response = new HashMap<>();
+    //         response.put("message", "User status updated successfully");
+    //         return ResponseEntity.ok(response);
+    //     } catch (RuntimeException e) {
+    //         Map<String, String> error = new HashMap<>();
+    //         error.put("message", e.getMessage());
+    //         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+    //     }
+    // }
 }

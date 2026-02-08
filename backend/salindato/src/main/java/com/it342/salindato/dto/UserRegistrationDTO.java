@@ -10,6 +10,7 @@ public class UserRegistrationDTO {
 
     public UserRegistrationDTO() {}
     
+    // DTO for transferring user registration data when creating a new account.
     public UserRegistrationDTO(String email, String firstName, String lastName, String password) {
         this.email = email;
         this.firstName = firstName;

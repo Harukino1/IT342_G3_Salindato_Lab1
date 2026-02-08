@@ -5,7 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PasswordEncoder {
+public class PasswordEncoder { // Provides password hashing and verification using BCrypt with optional salting.
     
     @Value("${password.encoder.salt:}")
     private String salt;
@@ -15,6 +15,7 @@ public class PasswordEncoder {
     
     private final BCryptPasswordEncoder bcryptEncoder = new BCryptPasswordEncoder();
 
+    // Hashes a raw password using BCrypt and an optional configured salt.
     public String hash(String rawPassword) {
         if (salt != null && !salt.isEmpty()) {
             rawPassword = rawPassword + salt;
@@ -22,6 +23,7 @@ public class PasswordEncoder {
         return bcryptEncoder.encode(rawPassword);
     }
 
+    // Verifies a raw password against a stored BCrypt hash.
     public boolean verify(String rawPassword, String storedHash) {
         if (salt != null && !salt.isEmpty()) {
             rawPassword = rawPassword + salt;

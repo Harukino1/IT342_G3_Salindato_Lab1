@@ -10,7 +10,8 @@ public class AuthResponseDTO {
 
     public AuthResponseDTO() {}
 
-      public AuthResponseDTO(String token, String userId, String email, String firstName, String lastName, String role) {
+    // DTO for sending authentication results, including token and basic user information.
+    public AuthResponseDTO(String token, String userId, String email, String firstName, String lastName, String role) {
         this.token = token;
         this.userId = userId;
         this.email = email;

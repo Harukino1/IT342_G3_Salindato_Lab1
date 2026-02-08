@@ -6,6 +6,7 @@ public class AuthRequestDTO {
 
     public AuthRequestDTO() {}
 
+    // DTO for transferring login credentials (email and password) during authentication.
     public AuthRequestDTO(String email, String password) {
         this.email = email;
         this.password = password;

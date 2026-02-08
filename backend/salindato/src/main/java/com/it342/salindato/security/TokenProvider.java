@@ -16,7 +16,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 
 @Component
-public class TokenProvider {
+public class TokenProvider { // Handles JWT creation, validation, and claim extraction for authenticated users.
     
     @Value("${jwt.secret-key:defaultSecretKey}")
     private String SECRET_KEY;
