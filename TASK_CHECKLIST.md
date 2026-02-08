@@ -10,30 +10,15 @@
 - [x] Create `POST /api/auth/register` endpoint (Hash: a51b58f)
 - [x] Configure MongoDB Database connection (Hash: e8b8830)
 - [x] Implement Password encryption using **BCrypt** (Hash: b38b29b)
+- [x] Create `POST /api/auth/login` endpoint (Hash: 98e11ca)
+- [x] Create `GET /api/user/me` (Protected) endpoint (Hash: 0b2ba74)
+- [x] Implement **Logout** functionality (Hash: 0b2ba74)
+- [x] Build **Dashboard/Profile** page (Protected) (Hash: 0b2ba74)
 ---
 
 ## 🟡 IN-PROGRESS
-- [x] Create `POST /api/auth/login` endpoint
-- [x] Build **Dashboard/Profile** page (Protected)
 ---
 
 ## 🔴 TODO
 
-### Backend Development (Spring Boot)
-- [ ] Create `GET /api/user/me` (Protected) endpoint
-
-### Web Application (ReactJS)
-- [ ] Build **Dashboard/Profile** page (Protected)
-- [ ] Implement **Logout** functionality
-
-### Documentation Update (/docs/FRS.pdf)
-- [ ] Include **ERD** (Entity Relationship Diagram)
-- [ ] Include **UML Diagrams** from previous activity
-- [ ] Capture and include **Register** UI screenshot
-- [ ] Capture and include **Login** UI screenshot
-- [ ] Capture and include **Dashboard/Profile** UI screenshot
-- [ ] Capture and include **Logout** action screenshot
-
-### README.md Completion
-- [ ] Write steps to run **Mobile App**
-- [ ] List all API endpoints
+- [x] Nothng at the moment
