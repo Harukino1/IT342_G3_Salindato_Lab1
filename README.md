@@ -7,7 +7,7 @@ WorkForce Portal is a robust, scalable, and secure centralized platform designed
 - **For Management**: Provides real-time data and analytics regarding personnel availability and workforce status.
 - **Automation**: Enhances operational efficiency by automating attendance tracking and status updates across the organization.
 
-## 🛠 Technologies Used
+## 🛠️ Technologies Used
 | Layer | Technology |
 | :--- | :--- |
 | **Backend** | Spring Boot (Java 21) |
@@ -26,12 +26,12 @@ WorkForce Portal is a robust, scalable, and secure centralized platform designed
 
 > **Recommended:** Use the Maven extension for easier compiling and running.
 
-### Using Maven
+### Using Maven Wrapper
 ```bash
-mvn clean compile
-mvn spring-boot:run
+.\mvn clean compile
+.\mvn spring-boot:run
 ```
-### Troubleshooting
+### 🚨 Troubleshooting
 > If the commands do not work in your terminal:
 1. Right-click mvnw.cmd
 2. Select “Open in Integrated Terminal”
@@ -42,6 +42,14 @@ mvn spring-boot:run
 cd web
 npm run dev
 ```
+
+### 🚨 Troubleshooting
+> If the commands do not work in your terminal:
+1. Install Node Package Manager (npm)
+```bash
+npm install
+```
+2. Run the commands again
 
 ## 🔌 API Endpoints
 - POST /api/auth/register
