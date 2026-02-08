@@ -30,10 +30,18 @@ WorkForce Portal is a robust, scalable, and secure centralized platform designed
 ```bash
 mvn clean compile
 mvn spring-boot:run
+```
+### Troubleshooting
+> If the commands do not work in your terminal:
+1. Right-click mvnw.cmd
+2. Select “Open in Integrated Terminal”
+3. Run the commands again
 
 ## 🚶 Steps to run Frontend
-- cd web
-- npm run dev
+```bash
+cd web
+npm run dev
+```
 
 ## 🔌 API Endpoints
 - POST /api/auth/register
