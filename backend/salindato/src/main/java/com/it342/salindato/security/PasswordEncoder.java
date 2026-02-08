@@ -10,14 +10,10 @@ public class PasswordEncoder {
     @Value("${password.encoder.salt:}")
     private String salt;
     
-    @Value("${password.encoder.strength:10}")
-    private int strength;
+    @Value("${password.encoder.algorithm:BCrypt}")
+    private String algorithm;
     
-    private final BCryptPasswordEncoder bcryptEncoder;
-
-    public PasswordEncoder() {
-        this.bcryptEncoder = new BCryptPasswordEncoder(strength);
-    }
+    private final BCryptPasswordEncoder bcryptEncoder = new BCryptPasswordEncoder();
 
     public String hash(String rawPassword) {
         if (salt != null && !salt.isEmpty()) {
