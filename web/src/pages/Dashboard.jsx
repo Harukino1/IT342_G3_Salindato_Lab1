@@ -6,7 +6,7 @@ const Dashboard = () => {
     <div className="dashboard">
       {/* Sidebar */}
       <aside className="sidebar">
-        <h2 className="logo">WorkForce</h2>
+        <h2 className="logo">WorkForce Portal</h2>
 
         <nav className="nav">
           <button className="nav-item active">Dashboard</button>
@@ -26,7 +26,7 @@ const Dashboard = () => {
           <div className="avatar">👤</div>
           <h1>
             Welcome,<br />
-            <span>Doe John</span>
+            <span>Doe, John</span>
           </h1>
         </section>
 
