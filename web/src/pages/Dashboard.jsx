@@ -7,6 +7,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -36,7 +37,11 @@ const Dashboard = () => {
     fetchUserData();
   }, [navigate]);
 
-  const handleLogout = async () => {
+  const handleLogoutClick = () => {
+    setShowLogoutConfirm(true);
+  };
+
+  const handleLogoutConfirm = async () => {
     const token = localStorage.getItem('token');
     
     try{
@@ -53,12 +58,30 @@ const Dashboard = () => {
     }
   };
 
+  const handleLogoutCancel = () => {
+    setShowLogoutConfirm(false);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
 
   return (
     <div className="dashboard">
+      {/* Logout Confirmation Modal */}
+      {showLogoutConfirm && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h3>Confirm Logout</h3>
+            <p>Are you sure you want to logout?</p>
+            <div className="modal-buttons">
+              <button className="btn-cancel" onClick={handleLogoutCancel}>Cancel</button>
+              <button className="btn-confirm" onClick={handleLogoutConfirm}>Logout</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Sidebar */}
       <aside className="sidebar">
         <h2 className="logo">WorkForce Portal</h2>
@@ -71,7 +94,7 @@ const Dashboard = () => {
           <button className="nav-item">Settings</button>
         </nav>
 
-        <button className="logout" onClick={handleLogout}>Logout</button>
+        <button className="logout" onClick={handleLogoutClick}>Logout</button>
       </aside>
 
       {/* Main */}
