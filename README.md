@@ -22,14 +22,16 @@ WorkForce Portal is a robust, scalable, and secure centralized platform designed
 - Maven 3.9+
 - MongoDB Atlas Account
 
-### 🚶 Steps to run Backend
-**(Use the Maven extension for easier compile and run)**
-- mvn clean compile
-- mvn spring-boot:run <br>
+## 🚶 Steps to Run the Backend
 
-**(If terminal doesn't work, right-click on the "mvnw.cmd" and click the "Open in Integrated Terminal" then use the commands again)**
+> **Recommended:** Use the Maven extension for easier compiling and running.
 
-### 🚶 Steps to run Frontend
+### Using Maven
+```bash
+mvn clean compile
+mvn spring-boot:run
+
+## 🚶 Steps to run Frontend
 - cd web
 - npm run dev
 
