@@ -6,7 +6,6 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -24,7 +23,6 @@ import com.it342.salindato.service.AuthService;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "*")
 public class AuthController {
 
     @Autowired
@@ -85,7 +83,7 @@ public class AuthController {
         }
     }
     
-    // Optional: Add endpoint to update user status
+    // Optional: Add endpoint to update user status for admin use
     @PutMapping("/users/{userId}/status")
     public ResponseEntity<?> updateUserStatus(
             @PathVariable String userId,
