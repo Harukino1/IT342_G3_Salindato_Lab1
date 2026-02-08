@@ -30,6 +30,8 @@ public class User {
     
     private String status;
 
+    private String token;
+
     public User() {}
     
     public User(String email, String firstName, String lastName, String password) {
@@ -62,4 +64,7 @@ public class User {
     
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
+
+    public String getToken() { return token; }
+    public void setToken(String token) { this.token = token; }
 }

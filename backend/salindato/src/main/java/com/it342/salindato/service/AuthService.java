@@ -1,16 +1,17 @@
 package com.it342.salindato.service;
 
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.it342.salindato.dto.AuthResponseDTO;
 import com.it342.salindato.dto.UserRegistrationDTO;
 import com.it342.salindato.model.User;
 import com.it342.salindato.repository.UserRepository;
 import com.it342.salindato.security.PasswordEncoder;
 import com.it342.salindato.security.TokenProvider;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @Service
 public class AuthService {
@@ -86,6 +87,12 @@ public class AuthService {
         if (!tokenProvider.validateToken(token)) {
             throw new RuntimeException("Invalid token");
         }
+    }
+
+    public User getCurrentUser(String token) {
+        // Find user by token
+        return userRepository.findByToken(token)
+            .orElseThrow(() -> new RuntimeException("Invalid or expired session"));
     }
 
     @Transactional

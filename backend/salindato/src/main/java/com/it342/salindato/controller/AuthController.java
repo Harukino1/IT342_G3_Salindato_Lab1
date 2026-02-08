@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -80,6 +81,32 @@ public class AuthController {
             Map<String, String> error = new HashMap<>();
             error.put("message", e.getMessage());
             return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
+        }
+    }
+
+    @GetMapping("/user/me")
+    public ResponseEntity<?> getCurrentUser(@RequestHeader("Authorization") String token) {
+        try {
+            // Extract token from "Bearer {token}" format
+            if (token != null && token.startsWith("Bearer ")) {
+                token = token.substring(7);
+            }
+        
+            User user = authService.getCurrentUser(token);
+        
+            Map<String, Object> response = new HashMap<>();
+            response.put("id", user.getId());
+            response.put("email", user.getEmail());
+            response.put("firstName", user.getFirstName());
+            response.put("lastName", user.getLastName());
+            response.put("role", user.getRole());
+            response.put("status", user.getStatus());
+        
+            return ResponseEntity.ok(response);
+        } catch (RuntimeException e) {
+            Map<String, String> error = new HashMap<>();
+            error.put("message", e.getMessage());
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
         }
     }
     
