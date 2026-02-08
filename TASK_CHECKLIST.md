@@ -7,13 +7,13 @@
 - [x] List Technologies used (Hash: da4533f)
 - [x] Write steps to run **Backend** (Hash: 44816f7)
 - [x] Write steps to run **Web App** (Hash: 44816f7)
+- [x] Create `POST /api/auth/register` endpoint (Hash: a51b58f)
+- [x] Configure MongoDB Database connection (Hash: e8b8830)
+- [x] Implement Password encryption using **BCrypt** (Hash: b38b29b)
 ---
 
 ## 🟡 IN-PROGRESS
-- [x] Configure MongoDB Database connection
-- [x] Create `POST /api/auth/register` endpoint
 - [x] Create `POST /api/auth/login` endpoint
-- [x] Implement Password encryption using **BCrypt**
 - [x] Build **Dashboard/Profile** page (Protected)
 ---
 
