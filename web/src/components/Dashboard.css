@@ -1,141 +1,234 @@
-body, html {
-  margin: 0;
-  font-family: sans-serif;
-}
+/* Dashboard.css - Color Adjusted to Match Login Theme */
 
-/* Container */
-.dashboard-container {
+/* --- Overall Layout --- */
+.dashboard {
   display: flex;
-  height: 100vh;
-  background: #121212;
-  color: #e5e5e5;
+  height: 100vh; /* fill viewport height */
+  width: 100vw;  /* fill viewport width */
+  gap: 30px;
+  padding: 30px;
+  background: radial-gradient(circle at top, #1a1a1a, #000); /* login style */
+  color: #e5e7eb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden; /* prevent scrolling */
 }
 
-/* Sidebar */
+/* --- Sidebar --- */
 .sidebar {
-  width: 250px;
-  background: #1f1f1f;
-  padding: 20px;
+  width: 280px;
+  height: 100%;
+  background: #0f0f0f; /* login card background */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
 }
 
-.sidebar h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 24px;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-.sidebar-buttons button {
-  display: block;
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #2a2a2a;
-  color: #e5e5e5;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: left;
-  transition: 0.3s;
-}
-
-.sidebar-buttons button:hover {
-  background: #6366f1;
-}
-
-.logout-btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #b91c1c;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-/* Main Content */
-.main-content {
-  flex: 1;
-  padding: 30px;
+.nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
-/* Profile Info */
-.profile-info-section {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid #6366f1;
-}
-
-.profile-name {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-/* Cards Container */
-.cards-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Cards */
-.card {
-  flex: 1 1 300px;
-  background: #1f1f1f;
-  padding: 20px;
+.nav-item {
+  background: transparent;
+  border: none;
+  color: #e5e7eb;
+  padding: 14px 18px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  max-height: 250px;       /* max height for scrolling */
-  overflow-y: auto;        /* scroll if content exceeds height */
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-.card h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
+.nav-item:hover {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
   color: #fff;
 }
 
-.card ul {
-  padding-left: 15px;
-  list-style-type: disc;
+.nav-item.active {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
 }
 
-.card li {
-  margin-bottom: 8px;
+.logout {
+  background: #ef4444;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
-/* Placeholder text */
-.placeholder-text {
-  color: #9ca3af;
-  font-style: italic;
+.logout:hover {
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.5);
+}
+
+/* --- Main Content --- */
+.main {
+  flex: 1;
+  height: 100%;
+  background: #0f0f0f; /* match login card background */
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* Welcome Header */
+.welcome-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background: #0f0f0f; /* login card style */
+  border-radius: 18px;
+  margin-bottom: 30px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.welcome-container h1 {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.welcome-container h1 span {
+  font-weight: 700;
+  color: #818cf8; /* subtle login highlight color */
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #0f0f0f;
+  border: 2px solid #1f2933;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+/* --- Cards --- */
+.content {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+}
+
+.card {
+  background: #0f0f0f; /* login card background */
+  border-radius: 18px;
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #1f2933;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.card-box {
+  background: #0f0f0f;
+  border: 1px dashed #1f2933;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  color: #e5e7eb;
+}
+
+/* Activity List */
+.activity ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-/* Scrollbar styling */
-.card::-webkit-scrollbar {
-  width: 6px;
+.activity li {
+  padding: 14px 0;
+  border-bottom: 1px solid #1f2933;
+  font-size: 16px;
+  color: #e5e7eb;
 }
 
-.card::-webkit-scrollbar-thumb {
-  background: #6366f1;
-  border-radius: 3px;
+.activity li:last-child {
+  border-bottom: none;
 }
 
-.card::-webkit-scrollbar-track {
-  background: #2a2a2a;
+/* --- Responsive --- */
+@media (max-width: 1600px) {
+  .dashboard {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px;
+    border-radius: 18px;
+    gap: 10px;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+  }
+
+  .main {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .welcome-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
 }
