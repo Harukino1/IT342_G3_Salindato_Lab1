@@ -8,10 +8,12 @@ WorkForce Portal is a robust, scalable, and secure centralized platform designed
 - **Automation**: Enhances operational efficiency by automating attendance tracking and status updates across the organization.
 
 ## 🛠 Technologies Used
-- Backend: Spring Boot(Java)
-- Database: MongoDB Atlas
-- Frontend: React.js, Vite
-- Build Tools: Maven, npm
+| Layer | Technology |
+| :--- | :--- |
+| **Backend** | Spring Boot (Java 21) |
+| **Database** | MongoDB Atlas |
+| **Frontend** | React.js (Vite) |
+| **Build Tools** | Maven, npm |
 
 ## 🚀 Getting Started
 
@@ -23,7 +25,7 @@ WorkForce Portal is a robust, scalable, and secure centralized platform designed
 ### Steps to run Backend
 **(Use the Maven extension for easier compile and run)**
 - mvn clean compile
-- mvn spring-boot:run
+- mvn spring-boot:run <br>
 
 **(If terminal doesn't work, right-click on the "mvnw.cmd" and click the "Open in Integrated Terminal" then use the commands again)**
 
