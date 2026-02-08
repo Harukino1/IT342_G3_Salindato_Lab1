@@ -28,8 +28,8 @@ WorkForce Portal is a robust, scalable, and secure centralized platform designed
 
 ### Using Maven Wrapper
 ```bash
-.\mvn clean compile
-.\mvn spring-boot:run
+.\mvnw clean compile
+.\mvnw spring-boot:run
 ```
 ### 🚨 Troubleshooting
 > If the commands do not work in your terminal:
