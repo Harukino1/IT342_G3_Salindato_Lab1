@@ -24,8 +24,8 @@ WorkForce Portal is a robust, scalable, and secure centralized platform designed
 
 ## 🚶 Steps to Run the Backend
 
-> **Recommended:** Use the Maven extension for easier compiling and running.
-
+> **Recommended:** Use the Maven extension for easier compiling a running.
+nd
 ### Using Maven Wrapper
 ```bash
 .\mvnw clean compile
