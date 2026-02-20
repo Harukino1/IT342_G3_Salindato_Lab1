@@ -17,14 +17,13 @@
 ---
 
 ## 🟡 IN-PROGRESS
+- [x] Register Screen – Implement UI and API integration for user sign-up.
+- [x] Login Screen – Implement UI and JWT credential handling.
+- [x] Dashboard Screen – Create protected view accessible only via valid Token.
+- [x] Logout Functionality – Clear local session/tokens and redirect to Login.
+- [x] Backend Integration – Connect all mobile services to the Spring Boot API.
 ---
 
 ## 🔴 TODO
-
-- [ ] Register Screen – Implement UI and API integration for user sign-up.
-- [ ] Login Screen – Implement UI and JWT credential handling.
-- [ ] Dashboard Screen – Create protected view accessible only via valid Token.
-- [ ] Logout Functionality – Clear local session/tokens and redirect to Login.
-- [ ] Backend Integration – Connect all mobile services to the Spring Boot API.
 - [ ] Mobile UI Screenshots
 - [ ] Diagram Reconciliation
