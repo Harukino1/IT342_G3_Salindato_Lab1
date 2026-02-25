@@ -14,9 +14,7 @@
 - [x] Create `GET /api/user/me` (Protected) endpoint (Hash: 0b2ba74)
 - [x] Implement **Logout** functionality (Hash: 0b2ba74)
 - [x] Build **Dashboard/Profile** page (Protected) (Hash: 0b2ba74)
----
-
-## 🟡 IN-PROGRESS
+- [x] Mobile UI Screenshots
 - [x] Register Screen – Implement UI and API integration for user sign-up.
 - [x] Login Screen – Implement UI and JWT credential handling.
 - [x] Dashboard Screen – Create protected view accessible only via valid Token.
@@ -24,6 +22,8 @@
 - [x] Backend Integration – Connect all mobile services to the Spring Boot API.
 ---
 
+## 🟡 IN-PROGRESS
+---
+
 ## 🔴 TODO
-- [ ] Mobile UI Screenshots
 - [ ] Diagram Reconciliation
